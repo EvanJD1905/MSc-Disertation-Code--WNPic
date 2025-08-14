@@ -14,7 +14,7 @@ library(ggeffects)
 
 
 #------------------------------------------------------------------------------------------------------------------------
-Combined_JRC_Data <- read_xlsx("Combined_Colony_JRC_Data.xlsx")
+Combined_JRC_Data <- read_xlsx("~/Desktop/Masters/Dissertation/Diss/Combined_Colony_JRC_Data.xlsx")
 
 Clean_data <- Combined_JRC_Data[, c(
   "TOTAL_No_Active_Nests", "TOTAL_No_Inactive_Nests", "ColonyID", "UniqueID", 
@@ -127,7 +127,7 @@ corrplot(cor_matrix, method = "color", addCoef.col = "black", tl.cex = 0.8)
 Proportion <- glmer(cbind(TOTAL_No_Active_Nests, TOTAL_No_Inactive_Nests) ~ Log_Distance_to_Forest_Edge + prop_degraded_500m_s + Log_Distance_to_FandT_s  + Distance_to_Road_s + Distance_to_SRiver_s + Log_Distance_to_Settlement_s + Evidence_of_human_activity + Survey_Year_yyyy + Protected_Area_Category + (1|ColonyID), family=binomial, data=Clean_data_noNA)
 
 #Active
-Active_P <- glmer(TOTAL_No_Active_Nests ~ Log_Distance_to_Forest_Edge + prop_degraded_500m_s + Log_Distance_to_FandT_s + Distance_to_Road_s + Distance_to_SRiver_s + Log_Distance_to_Settlement_s + Evidence_of_human_activity  + Survey_Year_yyyy + Protected_Area_Category + (1 | ColonyID) + (1|UniqueID), data=Clean_data_noNA, family=poisson)
+Active_P <- glmer(TOTAL_No_Active_Nests ~ Log_Distance_to_Forest_Edge + prop_degraded_500m_s + Log_Distance_to_FandT_s + Distance_to_Road_s + Distance_to_SRiver_s + Log_Distance_to_Settlement_s + Evidence_of_human_activity  + Survey_Year_yyyy + Protected_Area_Category + (1 | ColonyID), data=Clean_data_noNA, family=poisson)
 
 summary(Proportion)
 summary(Active_P)

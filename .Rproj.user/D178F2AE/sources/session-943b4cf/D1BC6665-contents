@@ -28,6 +28,7 @@ for(colony in unique(Clean_data$ColonyID)){
     Clean_data[which(Clean_data$ColonyID==colony),"Protected_Area_Category"] <- unique(toto$Protected_Area_Category)[1]
   }
 }
+
 # tata <- Clean_data[which(Clean_data$Survey_Year_yyyy>=2023),]
 # unique(tata$Protected_Area_Category)
 

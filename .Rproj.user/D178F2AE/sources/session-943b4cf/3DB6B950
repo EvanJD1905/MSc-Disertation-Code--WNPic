@@ -3,7 +3,7 @@
     "path": "~/Desktop/WNPicCode/PrimaryModels.R",
     "project_path": "PrimaryModels.R",
     "type": "r_source",
-    "hash": "3111727291",
+    "hash": "1068519667",
     "contents": "",
     "dirty": false,
     "created": 1755014974553.0,
@@ -13,15 +13,15 @@
         "tempName": "Untitled2",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "0,0",
-        "scrollLine": "0"
+        "cursorPosition": "130,0",
+        "scrollLine": "99"
     },
     "folds": "",
-    "lastKnownWriteTime": 1755015137,
+    "lastKnownWriteTime": 1755166901,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1755015137610,
+    "last_content_update": 1755166901058,
     "read_only": false,
     "read_only_alternatives": []
 }
